@@ -1,0 +1,131 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  /* Estilos para el campo de búsqueda */
+  .search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px 8px 8px 30px; /* espacio para el icono */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .search-input:focus {
+    border-color: #4CAF50;
+  }
+  .table-container {
+    margin-top: 20px;
+    max-height: 300px; /* Limitar la altura de la tabla */
+    overflow-y: auto; /* Agregar scroll vertical */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .table-container.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Botón de modificar */
+  button:nth-child(1) {
+    background-color: #008CBA;
+  }
+  
+  /* Botón de eliminar */
+  button:nth-child(2) {
+    background-color: #f44336;
+  }
+  /* Bloquear la tabla si el formulario está abierto */
+.table-container.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  /* Estilo para el botón "Agregar" */
+  .add-button {
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .add-button:focus {
+    outline: none;
+  }
+  

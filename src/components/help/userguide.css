@@ -1,0 +1,79 @@
+.user-guide {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-guide h1 {
+    font-size: 1.8em;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  .user-guide h2 {
+    font-size: 1.4em;
+    color: #555;
+    margin: 15px 0 10px;
+  }
+  
+  .user-guide ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .user-guide span {
+    font-weight: bold;
+    color: #0073e6;
+  }
+  
+  .user-guide p {
+    margin: 5px 0 15px;
+    line-height: 1.6;
+  }
+  
+  .user-guide .note {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-left: 3px solid #0073e6;
+    margin: 10px 0 20px;
+    border-radius: 4px;
+  }
+  
+  .user-guide ol span {
+    color: #0073e6;
+  }
+  
+  .user-guide p::first-line {
+    font-weight: bold;
+  }
+  
+  .user-guide button {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+  }
+  
+  .user-guide button:hover {
+    background-color: #005bb5;
+  }
+  
+  .user-guide .form-button {
+    display: inline-block;
+    margin: 5px 10px 15px 0;
+  }
+  

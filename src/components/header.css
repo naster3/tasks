@@ -1,0 +1,182 @@
+header {
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    box-shadow: 0 4px 30px -22px black;
+    z-index: 2;
+  }
+  .header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & a{
+      text-decoration: none;
+      color: #000;
+    }
+   & img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: relative;
+   top: 5px;
+   }
+   /*animation: saltar 1s infinite;
+    transform: translateY(0);*/
+  }
+  
+  @keyframes saltar{
+    0%{
+      transform: translateY(0)
+    }
+    100%{
+      transform: translateY(100px);
+    }
+  }
+  .menu {
+    height: 80px;
+    & nav{
+      height: 100%;
+    }
+    & nav ul{
+      height: 100%;
+      display: flex;
+      list-style: none;
+    }
+    & nav ul li{
+      height: 100%;
+      margin: 0px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; 
+      color: #777777;
+      font-size:18px;
+        transition: color 300ms;
+    }
+    & nav ul li :hover{
+      width: 100%;
+      color: #46a2fd;
+    }
+    & nav ul li a::after{
+      height: 4px;
+    display: block;
+    transition:   0.5s;
+    will-change: width;
+    bottom: 0;
+    right: 50%;
+    color: #5e5d5d;
+    font-size: 18px;
+   width: 0;
+  margin: auto;
+   content: ''; 
+   text-decoration: none;
+   text-decoration-color: #575656;
+    }
+    & nav ul li a:hover::after{
+      width: 100%;
+      background-color: #46a2fd;
+    }
+    & nav ul li a i{
+      display: none; 
+    }
+    & a{
+      color: black;
+      font-size: 22px;
+      position: relative;
+      top: 10px;
+    }
+  }
+  .menu-selected:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+  }
+  .menu-selected::after{
+    content: "";
+    width: 0%;
+  height: 4px;
+  background: #46a2fd;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+  }
+  .menu-selected:hover::after{
+    width: 100%;
+  }
+  .text-menu-selected {
+    color: #46a2fd;
+  }
+  #icon-menu {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeeeefa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  #icon-menu:hover {
+    opacity: 0.8;
+  }
+  @media screen and (max-width: 800px) {
+    body {
+      overflow-x: hidden;
+    }
+    .menu {
+      width: 0px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background: #fff;
+      overflow: hidden;
+      transform: translateX(-350px);
+      box-shadow: 10px 0 20px -25px black;
+      transition: all 300ms cubic-bezier(1, 0, 0, 1);
+      & nav ul{
+        flex-direction: column;
+      }
+      & nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+      }
+      & nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+      }
+      & nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+      }
+    }
+    .menu-selected:before {
+      width: 0;
+    }
+    #icon-menu {
+      display: flex;
+    }
+  }
