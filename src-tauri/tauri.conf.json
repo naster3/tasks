@@ -1,0 +1,36 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm run dev",
+    "beforeBuildCommand": "pnpm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "DevNaster Tasks",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "shell": {
+        "sidecar": true
+      }
+    },
+    "windows": [
+      {
+        "title": "DevNaster Tasks",
+        "width": 1280,
+        "height": 800,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "identifier": "com.devnaster.tasks",
+      "targets": "all",
+      "externalBin": ["binaries/backend"]
+    }
+  }
+}

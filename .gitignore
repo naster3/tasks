@@ -11,6 +11,17 @@ node_modules
 dist
 dist-ssr
 *.local
+.vite/
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+
+# Tauri
+src-tauri/target/
+src-tauri/.tauri/
+src-tauri/gen/
+src-tauri/binaries/
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +33,38 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# SQLite
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage/
+*.egg-info/
+pip-wheel-metadata/
+
+# Build outputs
+build/
+dist/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# PyInstaller
+crud_sqlite-master/build/
+crud_sqlite-master/dist/
+crud_sqlite-master/*.spec
+node_modules
