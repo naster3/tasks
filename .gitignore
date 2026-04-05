@@ -43,7 +43,7 @@ src-tauri/binaries/
 
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
 .pytest_cache/
 .mypy_cache/
@@ -56,7 +56,6 @@ pip-wheel-metadata/
 
 # Build outputs
 build/
-dist/
 
 # Env files
 .env
@@ -67,4 +66,3 @@ dist/
 crud_sqlite-master/build/
 crud_sqlite-master/dist/
 crud_sqlite-master/*.spec
-node_modules
