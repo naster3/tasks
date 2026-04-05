@@ -1,0 +1,10 @@
+# Dependencias de ejecucion del backend.
+# FastAPI expone la API, SQLAlchemy maneja persistencia, Uvicorn ejecuta el servidor
+# y Werkzeug aporta hashing seguro de contrasenas.
+fastapi==0.111.0
+sqlalchemy==2.0.31
+uvicorn==0.30.1
+werkzeug==3.0.3
+
+# Driver PostgreSQL para cuando DATABASE_URL use postgresql:// en lugar de SQLite.
+psycopg[binary]>=3.1,<4.0

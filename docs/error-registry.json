@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-05",
+  "issues": [
+    {
+      "id": "ISSUE-001",
+      "status": "open",
+      "priority": "high",
+      "area": "testing",
+      "summary": "El proyecto no tiene pruebas automatizadas propias.",
+      "impact": "Las regresiones dependen de validacion manual.",
+      "recommended_action": "Agregar pruebas API y UI para flujos criticos."
+    },
+    {
+      "id": "ISSUE-002",
+      "status": "open",
+      "priority": "medium",
+      "area": "frontend",
+      "summary": "Existe codigo residual en src/App.jsx que no participa en el arranque real.",
+      "impact": "Aumenta el ruido arquitectonico.",
+      "recommended_action": "Eliminar App.jsx y App.css si ya no se usan."
+    },
+    {
+      "id": "ISSUE-003",
+      "status": "open",
+      "priority": "medium",
+      "area": "backend",
+      "summary": "El backend depende de casts manuales por el tipado clasico de SQLAlchemy.",
+      "impact": "El tipado estatico es fragil y costoso de mantener.",
+      "recommended_action": "Migrar modelos a Mapped/mapped_column."
+    },
+    {
+      "id": "ISSUE-004",
+      "status": "open",
+      "priority": "medium",
+      "area": "security",
+      "summary": "La autenticacion del frontend sigue usando bearer token del lado cliente.",
+      "impact": "Menor robustez que una sesion basada en cookies HttpOnly.",
+      "recommended_action": "Evaluar migracion a auth con cookie segura para produccion."
+    },
+    {
+      "id": "ISSUE-005",
+      "status": "open",
+      "priority": "low",
+      "area": "observability",
+      "summary": "No existe logging estructurado ni registro persistente de errores runtime.",
+      "impact": "Dificulta el analisis de fallos en produccion.",
+      "recommended_action": "Agregar logger estructurado y captura de errores por request."
+    },
+    {
+      "id": "ISSUE-006",
+      "status": "resolved",
+      "priority": "medium",
+      "area": "observability",
+      "summary": "Se agrego logging estructurado JSON y X-Request-ID por request.",
+      "impact": "Ahora es posible correlacionar errores y requests en consola o archivo.",
+      "recommended_action": "Integrar agregacion externa o monitoreo si el proyecto pasa a produccion."
+    }
+  ]
+}

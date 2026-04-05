@@ -1,0 +1,87 @@
+/* Estilos compartidos por el formulario y los modales del inventario. */
+.inventory-form__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.inventory-form__container {
+  background: #fff;
+  padding: 20px 22px 18px;
+  border-radius: 14px;
+  width: min(760px, 100%);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+}
+
+.inventory-form__container h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+}
+
+.inventory-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 14px;
+  margin-top: 12px;
+}
+
+.inventory-form__grid label,
+.inventory-modal__grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.inventory-form__grid input,
+.inventory-form__grid select,
+.inventory-modal__grid input,
+.inventory-modal__grid select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d8dee9;
+  font-size: 14px;
+  background: #f8fafc;
+}
+
+.inventory-form__grid input:focus,
+.inventory-form__grid select:focus,
+.inventory-modal__grid input:focus,
+.inventory-modal__grid select:focus {
+  outline: 2px solid #c5dbff;
+  border-color: #93c5fd;
+  background: #fff;
+}
+
+.inventory-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.inventory-dialog__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e3e8ef;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #0f172a;
+}
